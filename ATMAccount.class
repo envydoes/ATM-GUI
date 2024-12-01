@@ -1,0 +1,42 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+public class ATM$Account {
+   private String username;
+   private String pin;
+   private int balance;
+
+   public ATM$Account(String var1, String var2, int var3) {
+      this.username = var1;
+      this.pin = var2;
+      this.balance = var3;
+   }
+
+   public int getBalance() {
+      return this.balance;
+   }
+
+   public void deposit(int var1) {
+      if (var1 > 0) {
+         this.balance += var1;
+      }
+
+   }
+
+   public void withdraw(int var1) {
+      if (var1 > 0 && var1 <= this.balance) {
+         this.balance -= var1;
+      }
+
+   }
+
+   public void updatePin(String var1) {
+      this.pin = var1;
+   }
+
+   public String getUsername() {
+      return this.username;
+   }
+
+   public String getPin() {
+      return this.pin;
+   }
+}
